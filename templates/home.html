@@ -38,12 +38,16 @@
 </head>
   <body>
     <div id='container'>
-    <h1>Prateek's Career</h1>
+    <h1>{{company_name}} Career</h1>
     <img id="banner" src='static/banner.jpg' >
     <h2>About Prateek</h2>
     <p class='bodytext'>Welcome to our career website, where opportunities meet ambition. Explore roles that align with your passion and skills, and embark on a journey of growth and fulfillment. Join us in shaping the future of Prateek's Career, where every role makes a difference. Your career starts here.</p>
     <h2>Open Positions</h2>
-    <p class='bodytext'>TODO - Show the jobs here</p>
+    <p class='bodytext'>
+      {% for job in jobs %}
+          {% include 'jobitem.html' %}
+      {% endfor %}
+    </p>
       <div style="text-align:center;">
     <button>Contact Us</button>
         <p>Copyright 2024, Prateek's</p>
